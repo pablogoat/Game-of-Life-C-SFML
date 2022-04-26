@@ -1,0 +1,3 @@
+C:/dziwne_rzeczy/VScode/LifeGame-SFML/build/CMakeFiles/lifegame-sfml.dir
+C:/dziwne_rzeczy/VScode/LifeGame-SFML/build/CMakeFiles/edit_cache.dir
+C:/dziwne_rzeczy/VScode/LifeGame-SFML/build/CMakeFiles/rebuild_cache.dir

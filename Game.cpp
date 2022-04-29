@@ -10,6 +10,12 @@
 Game::Game(){
     texture.loadFromFile("assets/cell.png");
     cell_sprite.setTexture(texture, false);
+    texture2.setRepeated(true);
+    texture2.loadFromFile("assets/net.png");
+
+    net_sprite.setTextureRect({0, 0, def_x, def_y});
+    net_sprite.setTexture(texture2, false);
+    net_sprite.setPosition(0, 0);
 
     line_x.setSize(sf::Vector2f(def_x,3));
     line_x.setOutlineColor(sf::Color::Blue);
@@ -82,7 +88,13 @@ sf::Vector2i Game::chosen_cell(sf::RenderWindow *window){
 
 void Game::draw(sf::RenderWindow *window){
 
-    window -> clear(sf::Color(0,0,0));
+    if(isRunning){
+        window -> clear(sf::Color(0,0,0));
+    }
+    else{
+        window -> clear(sf::Color(0,0,0));
+        window -> draw(net_sprite);
+    }
 
     for(int j = 0; j < 25; j++){
         for(int i = 0; i < 46; i++){

@@ -16,13 +16,6 @@ Game::Game(){
     net_sprite.setTextureRect({0, 0, def_x, def_y});
     net_sprite.setTexture(texture2, false);
     net_sprite.setPosition(0, 0);
-
-    line_x.setSize(sf::Vector2f(def_x,3));
-    line_x.setOutlineColor(sf::Color::Blue);
-    line_y.setSize(sf::Vector2f(def_y,3));
-    line_y.setOutlineColor(sf::Color::Blue);
-
-    line_y.rotate(90);
     
 }
 
@@ -30,8 +23,6 @@ void Game::run(){
 
     sf::RenderWindow window( sf::VideoMode( def_x, def_y), "LifeGame");
     window.setFramerateLimit(FrameLimit);
-
-    draw_net(&window);
 
     while(window.isOpen()){
 
@@ -105,18 +96,4 @@ void Game::draw(sf::RenderWindow *window){
         }
     }
 
-}
-
-void Game::draw_net(sf::RenderWindow *window){
-
-    for(int i = 0; i <= def_x; i += 40){
-        line_x.move(def_x,0);
-        window -> draw(line_x);
-    }
-
-    for(int i = 0; i <= def_y; i += 40){
-        line_y.setPosition(0,i);
-        line_x.move(0,def_y);
-        window -> draw(line_y);
-    }
 }

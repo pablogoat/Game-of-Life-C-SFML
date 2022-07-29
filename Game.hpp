@@ -8,8 +8,10 @@ private:
     bool isRunning = false;
     sf::Texture texture;
     sf::Texture texture2;
+    sf::Texture run_texture;
     sf::Sprite cell_sprite;
     sf::Sprite net_sprite;
+    sf::Sprite run_sprite;
 
 public:
 

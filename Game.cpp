@@ -4,8 +4,9 @@
 
 #define FrameLimit 10
 #define Texture_size 40
-#define def_x 1840
+#define def_x 1880
 #define def_y 980
+#define Toolbar_x 40
 
 Game::Game(){
     texture.loadFromFile("assets/cell.png");
@@ -13,7 +14,7 @@ Game::Game(){
     texture2.setRepeated(true);
     texture2.loadFromFile("assets/net.png");
 
-    net_sprite.setTextureRect({0, 0, def_x, def_y});
+    net_sprite.setTextureRect({0, 0, def_x - Toolbar_x, def_y});
     net_sprite.setTexture(texture2, false);
     net_sprite.setPosition(0, 0);
     
